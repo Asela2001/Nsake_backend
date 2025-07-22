@@ -7,12 +7,18 @@ import io
 app = FastAPI()
 
 # Configure CORS properly for production
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=[
+#         "https://your-expo-app.exp.host",
+#         "http://localhost:19006"
+#     ],
+#     allow_methods=["POST"],
+#     allow_headers=["*"],
+# )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://your-expo-app.exp.host",
-        "http://localhost:19006"
-    ],
+    allow_origins=["*"],  # For testing, restrict in production
     allow_methods=["POST"],
     allow_headers=["*"],
 )

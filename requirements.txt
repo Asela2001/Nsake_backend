@@ -4,3 +4,4 @@ python-multipart==0.0.6
 ultralytics==8.0.186
 pillow==10.0.0
 onnxruntime==1.15.1
+numpy==1.24.3
